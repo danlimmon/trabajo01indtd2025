@@ -1,0 +1,80 @@
+---
+title: "Enunciados Trabajo 1"
+author: "Daniel Limón"
+date: "2025-10-22"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Enunciados Daniel Limón
+
+## Problema 1:
+
+### Matriz:
+
+|       | E1 | E2 | E3 |
+|:------|---:|---:|---:|
+| **A1**| 220|  90| -40|
+| **A2**| 160| 120|  40|
+| **A3**| 110|  80|  60|
+
+```{r, eval=FALSE}
+tabla1 <- matrix(
+  c(220, 90, -40,
+    160,120,  40,
+    110, 80,  60),
+  nrow = 3, byrow = TRUE,
+  dimnames = list(
+    c("A1","A2","A3"),
+    c("E1","E2","E3")
+  )
+)
+
+
+```
+
+
+
+
+## Problema 2:
+
+Una tienda online con sede en Sevilla debe elegir proveedor logístico para la campaña de invierno. Los resultados económicos dependen de la incertidumbre de la demanda (pico, estable o baja). Se consideran tres alternativas contractuales. Los valores son beneficio neto en miles de € (objetivo: maximizar).
+
+### Alternativas
+- **B1. Contrato Fijo:** tarifa plana mensual alta; bajo coste variable; poca flexibilidad.
+- **B2. Contrato Flexible:** sin mínimo mensual; coste variable alto; buena adaptación a picos.
+- **B3. Híbrido:** fijo moderado + variable medio; equilibrio entre coste y flexibilidad.
+
+### Estados de la naturaleza
+- **F1. Pico de demanda**
+- **F2. Demanda estable**
+- **F3. Demanda baja**
+
+### Matriz de pagos (k€)
+
+|            | F1 | F2 | F3 |
+|:-----------|---:|---:|---:|
+| **B1 Fijo**     | 180|120| 50|
+| **B2 Flexible** | 150|110| 70|
+| **B3 Híbrido**  | 165|125| 60|
+
+
+
+```{r, eval=FALSE}
+
+tabla2 <- matrix(
+  c(180,120, 50,
+    150,110, 70,
+    165,125, 60),
+  nrow = 3, byrow = TRUE,
+  dimnames = list(
+    c("B1_Fijo","B2_Flexible","B3_Hibrido"),
+    c("F1_Pico","F2_Estable","F3_Baja")
+  )
+)
